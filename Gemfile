@@ -6,7 +6,9 @@ gem 'rails', '3.2.2'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'simple_form'
 
+gem 'go_robo', :path => '../go_robo'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -16,8 +18,16 @@ group :assets do
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer'
-
+  gem "twitter-bootstrap-rails"
   gem 'uglifier', '>= 1.0.3'
+end
+
+group :test, :development do
+  gem 'rspec-rails'
+  gem 'remarkable', :git => 'https://github.com/KingOfWeb/remarkable', :branch => 'rails-3.1'
+  gem 'remarkable_activemodel', :git => 'https://github.com/KingOfWeb/remarkable', :branch => 'rails-3.1'
+  gem 'remarkable_activerecord', :git => 'https://github.com/KingOfWeb/remarkable', :branch => 'rails-3.1'
+
 end
 
 gem 'jquery-rails'

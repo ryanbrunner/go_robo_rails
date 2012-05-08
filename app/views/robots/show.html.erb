@@ -1,0 +1,8 @@
+<h1><%= @robot.name %></h1>
+
+<code>
+  <%= @robot.code %>
+</code>
+
+<%= link_to "Challenge #{@robot.name}!", new_game_path(:game => { :players_attributes => [:robot_id => @robot.id]}) %>
+<%= link_to "Edit", edit_robot_path(@robot) %>

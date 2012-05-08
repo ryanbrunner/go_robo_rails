@@ -1,0 +1,11 @@
+<h1>Challenge a Robot</h1>
+
+<%= simple_form_for @game do |f| %>
+  <%= f.input :name %>
+
+  <%= f.simple_fields_for :players do |players| %>
+    <%= players.association :robot %>
+  <% end %>
+
+  <%= f.submit "FIGHT!!", :class => 'btn primary' %>
+<% end %>
