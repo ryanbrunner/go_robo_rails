@@ -1,8 +1,5 @@
-var GoRobo = function(host) { 
-    var moves = [];
-    function getMoves() {
-      $.getJSON(host + '/moves', function(json) { moves = json.moves } );
-    }
+var GoRobo = function(json) { 
+    var moves = json.moves;
 
     function printGame(roundNumber) {
       if (roundNumber == null) roundNumber = 0;
@@ -26,7 +23,7 @@ console.log("Round: " + roundNumber);
 
     function printRobot(robot) {
       var name = robot.name && robot.name.substr(0,1); 
-      if (robot.robo_type == 'Rocket') name = '*';
+      if (robot.robo_type == 'GoRobo::Rocket') name = '*';
       //console.log(name);
       context().strokeStyle = 'black';
       context().strokeText(name, robot.x*12, 20 + (robot.y*12));
@@ -37,7 +34,7 @@ console.log("Round: " + roundNumber);
     }
 
     return {
-      getMoves: getMoves,
+      //getMoves: getMoves,
       printRound: printRound,
       printRobot: printRobot,
       printGame: printGame
