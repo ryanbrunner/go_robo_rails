@@ -3,4 +3,12 @@
 <p>Winner: <strong><%= @game.winner %></strong></p>
 
 <h2>Results</h2>
+<canvas id = 'canvas' width = '600' height = '600'></canvas>
+<script>
+    var robo = GoRobo(<%= @game.results.to_json.html_safe %>);
+    robo.printGame();
+</script>
+
+
 <%= debug @game.results %>
+

@@ -15,6 +15,7 @@ class Game < ActiveRecord::Base
   before_create :run_game
 
   def run_game
+    robots = Robot.find(players.map(&:robot_id))
 
     robo_specs = robots.map do |r|
       GoRobo::Speedy.new :x => rand(30), :y => rand(30), :direction => 0, :name => r.name do
