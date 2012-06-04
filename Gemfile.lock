@@ -14,7 +14,7 @@ GIT
       rspec (>= 2.0.0.alpha11)
 
 PATH
-  remote: ../go_robo
+  remote: ../GoRobo
   specs:
     go_robo (0.0.1)
 

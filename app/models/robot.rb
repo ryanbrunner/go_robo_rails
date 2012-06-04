@@ -4,4 +4,8 @@ class Robot < ActiveRecord::Base
                    :uniqueness => true
   validates :code, :presence => true
 
+  def to_s
+    name
+  end
+
 end

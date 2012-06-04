@@ -8,7 +8,9 @@ gem 'rails', '3.2.2'
 gem 'sqlite3'
 gem 'simple_form'
 
-gem 'go_robo', :path => '../go_robo'
+gem 'go_robo', :path => '../GoRobo'
+
+#gem 'go_robo', :git => 'https://github.com/ryanbrunner/GoRobo.git'
 
 # Gems used only for assets and not required
 # in production environments by default.
