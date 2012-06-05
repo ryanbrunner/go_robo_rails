@@ -6,6 +6,6 @@
   <%= f.simple_fields_for :players do |players| %>
     <%= players.association :robot %>
   <% end %>
-
+  <%= debug @game.errors %>
   <%= f.submit "FIGHT!!", :class => 'btn primary' %>
 <% end %>
